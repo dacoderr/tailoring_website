@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CustomThreads - Tailoring Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/services_style.css">
+    <link rel="stylesheet" type="text/css" href="/css/project.css">
+    <link rel="stylesheet" href="/css/contact_form.css">
+    <script>
+        // Form Validation
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var message = document.forms["contactForm"]["message"].value;
+
+            // Name validation (accepts letters and spaces only)
+            var nameRegex = /^[A-Za-z\s]+$/;
+            if (name.trim() === "" || !nameRegex.test(name)) {
+                alert("Please enter a valid name.");
+                return false;
+            }
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.trim() === "" || !emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (message.trim() === "") {
+                alert("Please enter a message.");
+                return false;
+            }
+
+            // Show thank you message
+            alert("Thank you, we will contact you soon.");
+        }
+
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="logo-container">
+        <img src="/images/logo.png" alt="Random Logo" class="logo">
+        <h1 class="brand">CustomThreads</h1>
+    </div>
+    <div class="menu">
+        <button id="home-btn">Home</button>
+    </div>
+</header>
+
+<main>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form name="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="/images/logo.png" alt="Footer Logo" class="footer-logo">
+        <div class="contact-details">
+            <p>Contact: +1234567890</p>
+            <p>Email: info@customthreads.com</p>
+        </div>
+    </div>
+    <div class="address">
+        <h3>Address:</h3>
+        <p>123 Al Nahda empire building, Street 17A, Dubai, UAE</p>
+    </div>
+    <div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="/js/contact.js"></script>
+
+</body>
+</html>

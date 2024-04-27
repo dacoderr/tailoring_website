@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+}
+
+.container {
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: rgba(0, 128, 0, 0.258);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.message {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer {
+    background-color: green;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.services .services-slider .box {
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+.services .services-slider .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: -100px;
+}
+
+
+.services .services-slider .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color:  green;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.services .services-slider .box:hover .content {
+    opacity: .80;
+}
+
+.services .services-slider .box:hover img {
+    transform: scale(1.1);
+}
+
+.services .services-slider .box h3 {
+    font-size: 2rem;
+    color: #fff;
+}

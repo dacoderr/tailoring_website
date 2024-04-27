@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.brand {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.menu button {
+  margin-right: 10px;
+}
+
+
+.main {
+  padding: 20px;
+}
+
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.service-image {
+  margin-right: 20px;
+}
+
+.service-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-details p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.sub-service-select {
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.contact-details p {
+  margin: 0;
+}
+
+.address {
+  text-align: right;
+}
+
+
+#cart {
+  background-color: lightgrey;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#cart h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 5px;
+}
+
+#cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#checkout-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: green;
+  color: #fff;
+}

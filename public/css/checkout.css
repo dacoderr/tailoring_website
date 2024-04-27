@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 25%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#services-list {
+    list-style: none;
+    padding: 0;
+}
+
+#services-list li {
+    margin-bottom: 10px;
+}
+
+#services-list li span {
+    font-weight: bold;
+}
+
+#total-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 2px solid black;
+    padding: 20px;
+    background-color: lightgreen;
+    max-width: 500px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-logos img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    cursor: pointer;
+}
+
+.card-logos img {
+    width: 150px;
+    margin-right: 10px;
+}

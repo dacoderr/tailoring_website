@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CustomThreads - Tailoring Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/services.css">
+    <link rel="stylesheet" type="text/css" href="/css/project.css">
+
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="/images/logo.png" alt="Random Logo" class="logo">
+        <h1 class="brand">CustomThreads</h1>
+    </div>
+    <div class="menu">
+        <button id="home-btn">Home</button>
+    </div>
+
+</header>
+
+<a id="checkout-btn" href="/checkout" style = "right:700px; top:20px; font-size: 30px;">Proceed to Payment</a>
+<hr>
+
+<main class="main">
+
+    <section id="repairs-section" class="service-section">
+        <div class="service-content">
+            <div class="service-image">
+                <img src="/images/Repairs_pic.jpg" alt="Repairs Image" style="width: 200px; height: auto; border: 6px solid black;">
+
+            </div>
+            <div class="service-details">
+                <h2>Repairs</h2>
+                <p>Our skilled tailors are experts in repairing garments. We offer services such as patching up torn garments, fixing broken zippers, replacing buttons, mending ripped seams, and restoring damaged hems. With our attention to detail and quality craftsmanship, we'll ensure your garments are repaired to perfection.</p>
+
+            </div>
+
+            <div class="service-actions">
+                <label for="service1">Service:</label>
+                <select id="service1" data-section="1" onchange="updatePrice('service1')">
+                    <option value="0">Select a sub-service</option>
+                <% services.slice(0, 5).forEach(function(service) { %>
+                        <option value="<%= service.service_id %>" data-price="<%= service.price %>"><%= service.service %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" data-section="1" min="1" value="1">
+                <p id="price1">Price: </p>
+                <button onclick="addToCart('service1')">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="alterations-section" class="service-section">
+        <div class="service-content">
+            <div class="service-image">
+                <img src="/images/Alterations_pic.jpg" alt="alterations Image" style="width: 200px; height: auto;border: 6px solid black;">
+            </div>
+            <div class="service-details">
+                <h2>Alterations</h2>
+                <p>Whether you need adjustments for a better fit or want to transform your clothing, our alteration services are here to help. Our experienced tailors specialize in hemming pants and skirts, taking in or letting out waistbands, shortening or lengthening sleeves, resizing garments for a better fit, and adjusting dress or shirt lengths. We'll tailor your clothing to your specific measurements, ensuring a comfortable and stylish fit.</p>
+
+            </div>
+
+            <div class="service-actions">
+                <label for="service2">Service:</label>
+                <select id="service2" data-section="2" onchange="updatePrice('service2')">
+                    <option value="0"> Select a sub-service</option>
+                    <% services.slice(5, 10).forEach(function(service) { %>
+                        <option value="<%= service.service_id %>" data-price="<%= service.price %>"><%= service.service %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" data-section="2" min="1" value="1">
+                <p id="price2">Price: </p>
+                <button onclick="addToCart('service2')">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="clothing-section" class="service-section">
+        <div class="service-content">
+            <div class="service-image">
+                <img src="/images/Clothing_pic.jpg" alt="clothing Image" style="width: 200px; height: auto;border: 6px solid black;">
+            </div>
+            <div class="service-details">
+                <h2>Clothing</h2>
+                <p>For truly unique and personalized garments, our clothing services have got you covered. We offer custom-made suits, tailored trousers and skirts, and bespoke dresses and gowns designed to make you look and feel exceptional. Additionally, we provide formalwear alterations to ensure your special occasion attire fits perfectly. Our skilled tailors are also experienced in traditional clothing tailoring, catering to ethnic wear and cultural attire with utmost care and precision.</p>
+
+            </div>
+
+            <div class="service-actions">
+                <label for="service3">Service:</label>
+                <select id="service3" data-section="3" onchange="updatePrice('service3')">
+                    <option value="0"> Select a sub-service</option>
+                    <% services.slice(10, 15).forEach(function(service) { %>
+                        <option value="<%= service.service_id %>" data-price="<%= service.price %>"><%= service.service %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" data-section="3" min="1" value="1">
+                <p id="price3">Price: </p>
+                <button onclick="addToCart('service3')">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="embroidery-section" class="service-section">
+        <div class="service-content">
+            <div class="service-image">
+                <img src="/images/embroidery_pic.png" alt="embroidery Image" style="width: 200px; height: auto;border: 6px solid black;">
+            </div>
+            <div class="service-details">
+                <h2>Embroidery</h2>
+                <p>Elevate your garments with our 'Custom Embroidery' service. Our skilled artisans create exquisite and unique embroidery designs that reflect your personal style. From intricate patterns to personalized monograms, we use the finest threads and state-of-the-art machines to bring your vision to life. Add a personal touch to your shirts, jackets, or dresses and turn them into wearable works of art.</p>
+
+            </div>
+            <div class="service-actions">
+                <label for="service4">Service:</label>
+                <select id="service4" data-section="4" onchange="updatePrice('service4')">
+                    <option value="0"> Select a sub-service</option>
+                    <% services.slice(15, 19).forEach(function(service) { %>
+                        <option value="<%= service.service_id %>" data-price="<%= service.price %>"><%= service.service %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" data-section="4" min="1" value="1">
+                <p id="price4">Price: </p>
+                <button onclick="addToCart('service4')">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+</main>
+<hr>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="/images/logo.png" alt="Footer Logo" class="footer-logo">
+        <div class="contact-details">
+            <p>Contact: +1234567890</p>
+            <p>Email: info@customthreads.com</p>
+        </div>
+    </div>
+    <div class="address">
+        <h3>Address:</h3>
+        <p>123 Al Nahda empire building, Street 17A, Dubai, UAE</p>
+    </div>
+    <div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="/js/services.js"></script>
+
+</body>
+</html>
